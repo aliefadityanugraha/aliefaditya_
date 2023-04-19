@@ -1,0 +1,56 @@
+<div class="page-content-wrapper">
+  <div class="page-content-wrapper-inner">
+    <div class="row">
+      <div class="col-md-12 equel-grid">
+        <div class="grid">
+          <div class="grid-body py-3 d-flex justify-content-between align-items-center">
+            <p class="card-title ml-n1">Data Artikel</p>
+            <a class="btn btn-primary p-2" href="/create">Buat Artikel</a>
+          </div>
+          <!-- Table -->
+          <div class="table-responsive">
+            <table class="table table-hover table-sm">
+              <thead>
+                <tr class="solid-header">
+                  <th>Judul</th>
+                  <th>Rubrik</th>
+                  <th>Created at</th>
+                  <th>Slug</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Foreach -->
+                <% data.forEach(row => { %>
+                  <tr>
+                    <td>
+                      <small class="text-black font-weight-medium d-block"><%= row.judul %></small>
+                      <span class="text-gray">
+                        <span class="status-indicator rounded-indicator small bg-success"></span>Active </span>
+                    </td>
+                    <td>
+                      <small><%= row.rubrik %></small>
+                    </td>
+                    <td>
+                      <small><%= row.created_at %></small>
+                    </td>
+                    <td>
+                      <small><%= row.slug %></small>
+                    </td>
+                    <td class="d-flex justify-content-between gap-2">
+                      <a class="btn btn-warning px-1" href="read/<%= row.slug %>">Preview</a>
+                      <a class="btn btn-success px-1" href="update/<%= row.slug %>">Edit</a>
+                      <form action="delete/<%= row.slug %>?_method=DELETE" method="post">
+                        <button class="btn btn-danger px-1">Delete</button>
+                      </form>
+                    </td>
+                  </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+{
+  "name": "crud-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Alief Aditya Nugraha",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^1.28.1",
+    "cookie-parser": "^1.4.6",
+    "crypto": "^1.0.1",
+    "dotenv": "^14.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.2",
+    "helmet": "^5.0.2",
+    "method-override": "^3.0.0",
+    "mongodb": "^4.3.1",
+    "mongoose": "^7.0.4",
+    "multer": "^1.4.4",
+    "nodemailer": "^6.7.2",
+    "start": "^5.1.0"
+  }
+}

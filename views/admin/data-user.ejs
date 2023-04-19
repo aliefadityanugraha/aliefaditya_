@@ -1,0 +1,54 @@
+<div class="page-content-wrapper">
+  <div class="page-content-wrapper-inner">
+    <div class="row">
+      <div class="col-md-12 equel-grid">
+        <div class="grid">
+          <div class="grid-body py-3">
+            <p class="card-title ml-n1">Data User</p>
+          </div>
+          <!-- Table -->
+          <div class="table-responsive">
+            <table class="table table-hover table-sm">
+              <thead>
+                <tr class="solid-header">
+                  <th colspan="2" class="pl-4">Username</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Foreach -->
+                <% data.forEach(row => { %>
+                  <tr>
+                    <td class="pr-0 pl-4">
+                      <img class="profile-img img-sm" src="http://localhost:3030/assets/assets/img/profile/male/image_4.png" alt="profile image">
+                    </td>
+                    <td class="pl-md-0">
+                      <small class="text-black font-weight-medium d-block"><%= row.username %></small>
+                      <span class="text-gray">
+                        <span class="status-indicator rounded-indicator small bg-success"></span>Account Activated</span>
+                    </td>
+                    <td>
+                      <small><%= row.email %></small>
+                    </td>
+                    <td>
+                      <small><%= row.role %></small>
+                    </td>
+                    <td class="d-flex justify-content-between gap-2">
+                      <a class="btn btn-warning p-2" href="">Deactive Account</a>
+                      <a class="btn btn-success p-2" href="update/<%= row.id_user %>">Edit</a>
+                      <form action="delete/<%= row.id_user %>?_method=DELETE" method="post">
+                        <button class="btn btn-danger p-2">Delete</button>
+                      </form>
+                    </td>
+                  </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

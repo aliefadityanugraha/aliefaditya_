@@ -1,0 +1,63 @@
+<div class="grid">
+  <p class="grid-header">Tambah Artikel Baru</p>
+  <div class="row mb-3">
+    <div class="col-md-10">
+      <form action="/update/<%= data.slug %>?_method=PUT" method="post">
+        <div class="form-group row showcase_row_area">
+          <div class="col-md-3 showcase_text_area">
+            <label for="inputType1">Judul Artikel</label>
+          </div>
+          <div class="col-md-9 showcase_content_area">
+            <input type="text" class="form-control form-control-lg" name="judul" value="<%= data.judul %>" required>
+          </div>
+        </div>
+        <div class="form-group row showcase_row_area">
+          <div class="col-md-3 showcase_text_area">
+            <label for="inputType1">Thumbnail</label>
+          </div>
+          <div class="col-md-9 showcase_content_area">
+            <input type="url" class="form-control form-control-lg" name="thumbnail_url" value="<%= data.thumbnail_url %>" required>
+          </div>
+        </div>
+        <div class="form-group row showcase_row_area">
+          <div class="col-md-3 showcase_text_area">
+            <label for="inputType1">Slug</label>
+          </div>
+          <div class="col-md-9 showcase_content_area">
+            <input type="text" class="form-control form-control-lg" name="slug" value="<%= data.slug %>" required>
+          </div>
+        </div>
+        <div class="form-group row showcase_row_area">
+          <div class="col-md-3 showcase_text_area">
+            <label for="inputType1">Kategori</label>
+          </div>
+          <div class="col-md-9 showcase_content_area">
+            <input type="text" class="form-control form-control-lg" name="rubrik" value="<%= data.rubrik %>" required>
+          </div>
+        </div>
+        <div class="form-group row showcase_row_area">
+          <div class="col-md-3 showcase_text_area">
+            <label for="inputType1">Preview Text</label>
+          </div>
+          <div class="col-md-9 showcase_content_area">
+            <input id="x" type="hidden" name="prev_text" value="<%= data.prev_text %>" required>
+            <trix-editor input="x"></trix-editor>
+          </div>
+        </div>
+        <div class="form-group row showcase_row_area">
+          <div class="col-md-3 showcase_text_area">
+            <label for="inputType1">Content</label>
+          </div>
+          <div class="col-md-9 showcase_content_area">
+            <input id="xx" type="hidden" name="content" value="<%= data.content %>" required>
+            <trix-editor input="xx"></trix-editor>
+          </div>
+        </div>
+        <input type="hidden" name="author" value="<%= data.author %> ">
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="submit" class="btn btn-primary">Simpan Artikel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

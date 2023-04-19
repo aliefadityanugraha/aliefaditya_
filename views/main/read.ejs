@@ -1,0 +1,37 @@
+<style>
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #eeeef0;
+    color: #000;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 15px;
+    border: #ddd solid 1px;
+  }
+</style>
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="mx-auto lg:max-w-2xl">
+    <div class="mb-10 md:mx-auto lg:max-w-2xl md:mb-5">
+      <h3 class="mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+        <%= data.judul %>
+      </h3>
+      <a href="#" class="flex items-center p-3 -mt-2 text-sm text-gray-600 transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white rounded">
+        <img class="flex-shrink-0 object-cover mx-1 rounded-full w-9 h-9" src="<%= data.thumbnail_url %>" alt="jane avatar">
+        <div class="mx-1">
+          <h1 class="text-sm font-semibold text-gray-700 dark:text-gray-200 dark:text-gray-400"><%= data.author %></h1>
+          <p class="text-sm text-gray-500 dark:text-gray-400"><%= data.author %></p>
+        </div>
+      </a>
+    </div>
+    <div class="mb-4 lg:mb-6">
+      <img class="object-cover w-full h-56 rounded sm:h-64 md:h-80 lg:h-96" src="<%= data.thumbnail_url %>" alt="" />
+    </div>
+    <div class="mb-4 text-gray-700 sm:mx-auto md:text-lg text-justify dark:text-gray-400">
+      <%- data.prev_text %>
+    </div>
+    <div class="mb-4 text-gray-700 sm:mx-auto md:text-lg text-justify dark:text-gray-400">
+      <%- data.content %>
+    </div>
+  </div>
+</div>

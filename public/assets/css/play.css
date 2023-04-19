@@ -1,0 +1,334 @@
+:root{
+  --text-color: #fff;
+  --bg-color:rgb(17, 19, 25);
+  --primary-color:#198754;
+  --secondary-color:#1a1c22;
+  --secondary-color-sterch:#1a1c25;
+}
+html[data-color-mode="light"]{
+  --text-color: #000;
+  --bg-color:#fff;
+  --primary-color:#198754;
+  --secondary-color:#ddd;
+  --nav-color:linear-gradient(0deg, rgba(225, 225, 225, 0) 0%, rgba(225, 225, 225, 0.75) 100%);
+}
+*{
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+::-moz-selection {
+  background-color: var(--primary-color);
+  color: #ffffff
+}
+::selection {
+  background-color: var(--primary-color);
+  color: #ffffff
+}
+body{
+  background: var(--bg-color);
+}
+/* Navbar */
+nav{
+  margin: 15px 30px 15px 30px;
+  border-radius: 10px;
+  color: var(--text-color);
+}
+a{
+  color: var(--text-color);
+  text-decoration: none;
+}
+.container-navbar{
+  display: flex;
+  justify-content: space-around;
+}
+.content-left{
+  display: flex;
+  gap:20px;
+}
+.content-right{
+  display:flex;
+  gap:20px;
+}
+i{
+  padding: 0px 8px 0px 0px;
+}
+.content-left .nav-side{
+  padding: 5px 5px 10px 5px;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+}
+.content-left .nav-side:hover{
+  color: var(--primary-color);
+  border-bottom: 2px solid #fff;
+}
+.content-left .active{
+  border-bottom: 2px solid #fff;
+}
+.content-left .active:hover{
+  border-bottom: 2px solid var(--primary-color);
+}
+.content-right .search{
+  max-width:300px;
+  border-radius:50px;
+  padding:4px 20px;
+  background-color: #232323;
+  color:#000;
+  border:1.5px solid #232323;
+  transition: all 0.5s ease-out;
+}
+.content-right .search:focus{
+  outline: none;
+  background-color: #fff;
+  border:1.5px solid var(--primary-color);
+}
+.content-right .circle{
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-out;
+}
+.content-right .circle:hover{
+  background: rgba(225,225,225,0.5);
+}
+.content-right .circle .user-svg{
+  width: 30px;
+  height: 30px;
+}
+.content-right .circle .globe-svg{
+  width: 25px;
+  height: 25px;
+}
+.content-right .dropdown{
+  margin: 5px 0px 0px 0px;
+  color:var(--text-color);
+}
+/* Modal Login */
+.modal-content{
+  background-color:var(--bg-color);
+  color: var(--text-color);
+}
+.modal-head-zone{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 0px 20px
+}
+/* Form */
+.input-wrapper{
+  display: flex;
+  background-color: var(--secondary-color);
+  color:white;
+  width:100%;
+  margin: 10px 0px;
+  border-radius: 5px;
+  border:1px solid rgb(112, 112, 112);
+}
+.input-icon{
+  padding: 5px 10px;
+  border-right: 1px solid rgb(156, 156, 156);
+}
+.link-forgot-password p{
+  font-size: 12px;
+  text-align: center;
+}
+.link-forgot-password p a{
+  text-decoration: none;
+}
+.link-forgot-password p a:hover{
+  color:white;
+}
+input{
+  background-color: var(--secondary-color);
+  color:var(--text-color);
+  border:0;
+  width: 100%;
+  margin:0px 0px 0px 15px;
+}
+input:focus{
+  outline: none;
+}
+.button-submit{
+  width: 100%;
+  background-color: var(--primary-color);
+  color:var(--text-color);
+  padding: 5px;
+  border:0;
+  border-radius: 5px;
+  margin: 10px 0px 0px 0px;
+}
+.button-submit:hover{
+  background-color: #408a68;
+}
+.modal-body .col-md-4 a{
+  display: block;
+  margin: 8px auto;
+}
+.modal-body .third-party-apps{
+  font-size: 11px;
+}
+.modal-body ul{
+  list-style: none;
+  transform: translateX(-15px);
+}
+.modal-body ul li a{
+  background-color: #323232;
+  border-radius: 50px;
+  padding: 5px 0px;
+  margin: 5px 0px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+.modal-body ul li a i{
+  padding: 8px;
+}
+/* Video Player CSS */
+.container-play {
+  margin: 30px 40px 0px 40px;
+  color: var(--text-color);
+  background-color:var(--secondary-color);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.534);
+}
+video{
+  background-color: var(--bg-color);
+}
+.nav-tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
+.title-eps{
+  text-align: center;
+  padding:10px 10px 0px 10px;
+}
+.hr-title-eps{
+  padding: 0px 10px 0px 0px;
+}
+.nav-item .nav-link{
+  background-color: #2e2e2e;
+  color:var(--text-color);
+  border-radius: 5px;
+  margin:3px;
+}
+.nav-item .nav-link:focus{
+  background-color: var(--primary-color);
+}
+/* Main Content (details) */
+.details{
+  padding: 40px;
+  color: var(--text-color);
+}
+.details-img{
+  border-radius: 5px;
+  width: 100%;
+}
+.status-film{
+  display: inline-flex;
+}
+#more{
+  display: none;
+  transition: all 0.2s ease-out;
+}
+#btnReadMore{
+  color:var(--primary-color)
+}
+p{
+  cursor: pointer;
+}
+/* Container erupa Tapi Tak sama CSS */
+.container-serupa-tapi-tak-sama{
+  padding: 20px;
+}
+/* Owl Carousel CSS */
+.container-owl-carousel{
+  padding: 30px;
+}
+.navbar-carousel{
+  padding: 20px 10px 10px 10px;
+}
+.owl-carousel{
+  padding: 10px 20px 0px 20px;
+}
+.owl-nav{
+  transform: translate(0px,-150px);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+.owl-nav:hover{
+  opacity: 1;
+}
+.owl-left,.owl-right{
+  background-color: #fff;
+  color: #000;
+  border-radius: 50px;
+  padding: 6.5px 9px;
+  box-shadow: 1px 1px 10px var(--secondary-color);
+}
+/* Card CSS */
+.card-film{
+  width: 150px;
+  height: 250px;
+  background: rgba(255, 0, 0, 0);
+  transition: all 0.2s ease-out;
+  overflow-y: hidden;
+}
+.card-film img{
+  background-size: contain;
+  width: 100%;
+  height:200px;
+  border-radius: 10px;
+  border: 0;
+  transition: all 0.2s ease-out;
+}
+.card-film p{
+  text-align:center;
+  color:var(--text-color);
+  font-weight: 300;
+  word-wrap: break-word;
+}
+/* Footer CSS */
+footer {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  text-align: left;
+  padding: 50px 30px 30px 30px;
+}
+/* Media Query 768px */
+@media screen and (max-width:768px){
+  body{
+    background: var(--bg-color);
+    font-size: 13px;
+  }
+  /* Navbar CSS */
+  .content-right{
+    display: none;
+  }
+  .modal-body .row .col-6 img{
+   display:none;
+  }
+  /* Video Player CSS */
+  .container-play {
+    margin: 30px 0px 0px 0px;
+    padding: 0px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.534);
+  }
+  .container-play hr{
+    display:none;
+  }
+  /* Main Content (details) */
+  .details-img{
+    display:none;
+  }
+  /* Card CSS */
+  .card{
+   width: 100px;
+   height: 180px;
+  }
+}
